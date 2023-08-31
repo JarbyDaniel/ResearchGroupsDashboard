@@ -1,30 +1,30 @@
 
 # Research Group Analitycs Dashboard
 
-Herramienta para el análisis y visualización bibliométrica de la producción científica de los grupos de investigación en el Departamento del Cauca.
+Software for the analysis and bibliometric visualization of the scientific production of research groups in the Department of Cauca.
 
-Tiene las siguientes características principales:
-- Extrae datos de investigadores y grupos de investigación de las plataformas CvLAC, GrupLAC y Scopus, de manera masiva o bajo demanda.
-- Búsqueda y eliminación de documentos duplicados.
-- Preprocesamiento de datos.
-- Emparejamiento de datos entre GrupLAC y Scopus.
-- Diferentes gráficos de visualización de datos.
-- Redes de colaboración.
-- Interfaces gráficas de usuario.
+It has the following main features:
+- Extracts data of researchers and research groups from CvLAC, GrupLAC and Scopus platforms, in bulk or on demand.
+- Search and elimination of duplicate documents.
+- Data preprocessing.
+- Data matching between GrupLAC and Scopus.
+- Different data visualization graphics.
+- Collaboration networks.
+- Graphical user interfaces.
 
-Video instructivo: https://youtu.be/tdp8FPcWMco
+Instructional video: https://youtu.be/tdp8FPcWMco
 
 ---
 
-## Instalación
+## Installation
 > [!IMPORTANT]
-> ***Para el funcionamiento de la herramienta, es obligatorio tener instalado el gestor de base de datos [PostgreSQL.](https://www.postgresql.org/download/)*** *Si desea utilizar una herramienta gráfica para administrar PostgreSQL se recomienda instalar [PgAdmin 4.](https://www.pgadmin.org/download/)*
+> ***For the tool to work, it is mandatory to have the database manager installed. [PostgreSQL.](https://www.postgresql.org/download/)*** *If you want to use a graphical tool to manage PostgreSQL it is recommended to install [PgAdmin 4.](https://www.pgadmin.org/download/)*
 
-Para instalar el proyecto, realice una clonaciòn de la última versión del repositorio ejecutando el siguiente comando git:
+To install the project, perform a clone of the latest version of the repository by running the following command git:
 ```bash
-    git clone https://github.com/alexper11/General.git
+    git clone https://github.com/JarbyDaniel/ResearchGroupsDashboard.git
 ```
-Dentro de la carpeta generada, ejecute el siguiente comando para instalar las librerias necesarias:
+Inside the generated folder, run the following command to install the necessary libraries:
 
 ```bash
     pip install -r requierements.txt
@@ -32,92 +32,92 @@ Dentro de la carpeta generada, ejecute el siguiente comando para instalar las li
 
 ---
 
-## Contenido
-- Base de datos para CvLAC, GrupLAC y Scopus.
-- Extractor de datos de GrupLAC y CvLAC.
-- Extractor de datos de Scopus.
-- Dashboard (Tablero de análisis).
+## Content
+- Database for CvLAC, GrupLAC and Scopus.
+- GrupLAC and CvLAC data extractor.
+- Scopus data extractor.
+- Dashboard (Analysis board).
 
-## Base de datos para CvLAC, GrupLAC y Scopus.
+## Database for CvLAC, GrupLAC and Scopus.
 
-Los archivos generados en la extracción de datos usados en el dashboard se almacenan en el directorio `dashboard/assets/data/`.
+The files generated in the extraction of data used in the dashboard are stored in the directory `dashboard/assets/data/`.
 
 
-Adicionalmente se brindan las bases de datos de la información extraída de manera masiva para el Departamento del Cauca en Cvlac, GrupLAC y Scopus, estos se encuentran en el directorio `BD/`.
+In addition, the databases of the information massively extracted for the Department of Cauca in Cvlac, GrupLAC and Scopus are available in the following directory `BD/`.
 
-## Extractor de datos de GrupLAC y CvLAC.
+## GrupLAC and CvLAC data extractor.
 
-Esta herramienta extrae los datos del aplicativo CvLAC y GrupLAC pertenecientes al sistema Scienti en Colombia. Para utilizar esta herramienta, se requiere ingresar el enlace del CvLAC o GrupLAC de interés y la plataforma extraerá la información pública disponible en el sistema.
-Se recomienda que cualquier persona que utilice esta herramienta lea detenidamente la [política de privacidad y los términos de uso](https://minciencias.gov.co/ciudadano/terminosycondiciones-datospersonales) definidos por MinCiencias, que establece las pautas y normas para el uso ético de los datos.
+This tool extracts data from the CvLAC and GrupLAC applications belonging to the Scienti system in Colombia. To use this tool, it is required to enter the link of the CvLAC or GrupLAC of interest and the platform will extract the public information available in the system.
+It is recommended that any person using this tool carefully read the [privacy policy and terms of use](https://minciencias.gov.co/ciudadano/terminosycondiciones-datospersonales) defined by MinCiencias, which establishes guidelines and standards for the ethical use of data.
 
-## Extractor de datos de Scopus.
+## Scopus data extractor.
 
-Esta herramienta extrae datos de la plataforma Scopus. Para ello es necesario el registro de un Apikey suministrado por Scopus y un Token avalado por la institución.
+This tool extracts data from the Scopus platform. This requires the registration of an Apikey provided by Scopus and a token endorsed by the institution.
 
 ## Dashboard
 
-Se integra una sección llamada “Explorar datos” con el objetivo de inspeccionar los datos previamente obtenidos y preprocesados por medio de los sistemas de extracción, adicionalmente se integran dos secciones para el análisis y visualización de los datos provenientes de GrupLAC y Scopus. El dashboard está desarrollado dentro del marco del trabajo de grado titulado “Dashboard para el análisis y visualización bibliométrica dentro del ámbito de los grupos de investigación en el departamento del Cauca” desarrollado en la Universidad del Cauca por los estudiantes Jarby Daniel Salazar Galindez y Edison Alexander Mosquera Perdomo. El dashboard busca ser un asistente para los actores del Sistema Regional de Ciencia, Tecnología e Innovación del Cauca.
+A section called "Explore data" is integrated with the objective of inspecting the data previously obtained and preprocessed by means of the extraction systems, additionally two sections are integrated for the analysis and visualization of the data coming from GrupLAC and Scopus. The dashboard is developed within the framework of the degree work entitled "Dashboard for bibliometric analysis and visualization within the scope of research groups in the department of Cauca" developed at the University of Cauca by students Jarby Daniel Salazar Galindez and Edison Alexander Mosquera Perdomo. The dashboard seeks to be an assistant for the actors of the Regional System of Science, Technology and Innovation of Cauca.
 
 ---
 
-## Instrucciones para ejecutar el proyecto
+## Instructions for running the project
 
-Para extraer los datos de CvLAC, Gruplac y Scopus de forma masiva (uso para administradores), ejecute el siguiente comado:
+To extract data from CvLAC, Gruplac and Scopus in bulk (use for administrators), run the following command:
 
 ```bash
     python main.py    
 ```
-Luego de la extracción, se ejecuta el preprocesamiento de los datos con el siguiente comando:
+After the extraction, the data preprocessing is executed with the following command:
 
 ```bash
     python preprocessing.py
 ```
-Para extraer los datos de CvLAC, Gruplac y Scopus bajo demanda (con interfaz de usuario), siga los siguientes pasos:
+To extract CvLAC, Gruplac and Scopus data on demand (with user interface), follow the steps below:
 
-Para ejecutar la interfaz de usuario del extractor de CvLAC y Gruplac:
+To run the CvLAC and Gruplac extractor user interface:
 ```bash
-  python interfaz_extractor_scienti.py
+  python interface_extractor_scienti.py
 ```
-Abra el siguiente link en el navegador: `127.0.0.1:5006`
+Open the following link in the browser: `127.0.0.1:5006`.
 
-Para ejecutar la interfaz de usuario del extractor de Scopus:
+To run the Scopus extractor user interface:
 ```bash
-  python interfaz_extractor_scopus.py
+  python interface_extractor_scopus.py
 ```
-Abra el siguiente link en el navegador: `127.0.0.1:5005`
+Open the following link in the browser: `127.0.0.1:5005`.
 
-Para ejecutar el dashboard ejecute el siguiente comando:
+To run the dashboard run the following command:
 ```bash
   python dashboard/index.py
 ```
-Abra el siguiente link en el navegador: `localhost:8051`
+Open the following link in the browser: `localhost:8051`.
 
 ---
 
-Para verificar la consistencia entre los datos extraídos y los registrados en las plataformas de CvLAC y GrupLAC, ejecute el siguiente comando :
+To verify the consistency between the extracted data and the data registered in the CvLAC and GrupLAC platforms, run the following command :
 
 ```bash
   python testing_main.py
 ```
-Tenga en cuenta que la verificación se hace con respecto a los archivos CSV que debe generar manualmente, para ello reemplace y siga la estructura de los archivos para [CvLAC](cvlac/testing/testing_cvlac)  y [GrupLAC.](cvlac/testing/testing_gruplac)
+Note that the verification is done with respect to the CSV files that you must generate manually, for this replace and follow the structure of the files for [CvLAC](cvlac/testing/testing_cvlac)  and [GrupLAC.](cvlac/testing/testing_gruplac)
 
 ---
 
 > [!NOTE]
-> Para expandir el uso del proyecto a otros departamentos de Colombia, utilice el [buscador de grupos por departamento](https://scienti.minciencias.gov.co/ciencia-war/BusquedaGrupoXDepartamento.do) de Minciencias para elegir el departamento de interés y reemplace la url utilizada en la línea 83 del archivo main.py
+> To expand the use of the project to other departments of Colombia, use the [search for groups by department](https://scienti.minciencias.gov.co/ciencia-war/BusquedaGrupoXDepartamento.do) of Minciencias to choose the department of interest and replace the url used in line 83 of main.py file
 
-Ejemplo utilizado para el Departamento del Cauca:
+Example used for the Department of Cauca:
 ```python
 [83] lista_gruplac=Extractor.get_gruplac_list('https://scienti.minciencias.gov.co/ciencia-war/busquedaGrupoXDepartamentoGrupo.do?codInst=&sglPais=COL&sgDepartamento=CA&maxRows=15&grupos_tr_=true&grupos_p_=1&grupos_mr_=130')    
 ```
 ---
 
 > [!WARNING]
->*Debido al gran volúmen de datos utilizado, para evitar problemas de caché se recomienda desplegar el proyecto desde un navegador privado.*
+>*Due to the large volume of data used, to avoid cache problems it is recommended to deploy the project from a private browser.*
 
 ---
 
-## Autores
+## Authors
 
 - [Jarby Daniel Salazar Galindez](https://www.github.com/jarbydaniel)
 - [Edison Alexander Mosquera Perdomo](https://www.github.com/alexper11)
