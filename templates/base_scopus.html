@@ -1,0 +1,101 @@
+{% extends 'bootstrap/base.html' %}
+{% block head %}
+    {{ super() }}
+    <title>
+        {% block title %}Extractor |{% endblock %}
+    </title>
+    
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/main.css')}}">
+    <!-- start -->
+    <script href="{{ url_for('static',filename='js/jquery.js')}}"></script>
+	<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script> -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <!-- start -->
+    <link rel="shortcut icon" href="{{ url_for('static', filename='images/logo.png') }}">
+    <script>
+        $(document).ready(function(){
+        $('#form_extractor_autor').on('submit', function(event){
+        //   event.preventDefault();         
+          $.ajax({
+          url:"/extractor",
+          method:"POST",
+          data:$(this).serialize(),
+          beforeSend:function()
+          {
+           $('#submit_autor').attr('disabled', 'disabled');
+           $('#submit_producto').attr('disabled', 'disabled');
+           $('#process').css('display', 'block');
+           $('#logo_static').css('display', 'none');
+           $('#logo_load').css('display', 'block');
+          },
+          success:function(data)
+          { 
+            
+          }
+         })              
+        });
+        $('#form_extractor_producto').on('submit', function(event){
+        //   event.preventDefault();         
+          $.ajax({
+          url:"/extractor",
+          method:"POST",
+          data:$(this).serialize(),
+          beforeSend:function()
+          {
+           $('#submit_autor').attr('disabled', 'disabled');
+           $('#submit_producto').attr('disabled', 'disabled');
+           $('#process').css('display', 'block');
+           $('#logo_static').css('display', 'none');
+           $('#logo_load').css('display', 'block');          
+          },
+          success:function(data)
+          { 
+            
+          }
+         })              
+        });
+
+        });
+    </script>
+    <!-- end -->
+
+{% endblock %}
+
+{% block body %}
+    {% block navbar %}
+        {% include 'navbar_scopus.html' %}
+    {% endblock %}
+    {% block modal %}
+        {% include 'modal_scopus.html' %}
+    {% endblock %}
+    
+    {% for message in get_flashed_messages() %}
+        {% if message == 'Credenciales registradas con éxito' or message == 'Extracción del perfil de Scopus terminado' or message == 'Extracción del producto de Scopus terminado' %}
+            <div class="alert alert-info alert-dismissible center-block" style="max-width: 90rem;">
+                <button type="button"
+                        data-dismiss="alert"
+                        class="close">&times;</button>
+                {{ message }}
+            </div>
+        {% elif message == 'Guardado exitósamente en la base de datos' %}
+            <div class="alert alert-success alert-dismissible center-block" style="max-width: 90rem;">
+                <button type="button"
+                        data-dismiss="alert"       
+                        class="close">&times;</button>
+                {{ message }}
+            </div>       
+        {% else %}
+        <div class="alert alert-danger alert-dismissible center-block" style="max-width: 90rem;">
+            <button type="button"
+                    data-dismiss="alert"
+                    class="close">&times;</button>
+            {{ message }}
+        </div> 
+        {% endif %}
+    {% endfor %}
+    
+    {% block content %}{% endblock %}
+    {% block scripts %}
+        {{ super()}}<!--para heredar todos los scripts -->
+    {% endblock %}
+{% endblock %}
