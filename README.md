@@ -41,10 +41,10 @@ Inside the generated folder, run the following command to install the necessary 
 
 ## Database for CvLAC, GrupLAC and Scopus.
 
-The files generated in the extraction of data used in the dashboard are stored in the directory `dashboard/assets/data/`.
+The files generated in the extraction of data used in the dashboard are stored in the directory [dashboard/assets/data/](dashboard/assets/data/)`.
 
 
-In addition, the databases of the information massively extracted for the Department of Cauca in Cvlac, GrupLAC and Scopus are available in the following directory `BD/`.
+In addition, the databases of the information massively extracted for the Department of Cauca in Cvlac, GrupLAC and Scopus are available in the following directory [BD/](BD/).
 
 ## GrupLAC and CvLAC data extractor.
 
@@ -54,6 +54,9 @@ It is recommended that any person using this tool carefully read the [privacy po
 ## Scopus data extractor.
 
 This tool extracts data from the Scopus platform. This requires the registration of an Apikey provided by Scopus and a token endorsed by the institution.
+
+> [!NOTE]
+> To perform mass data extraction, place a text file named key.txt in the [scopus/](scopus/) directory. In the first line of this file, enter the Apikey, and in the next line, enter the corresponding Token.
 
 ## Dashboard
 
