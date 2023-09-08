@@ -60,7 +60,7 @@ This tool extracts data from the Scopus platform. This requires the registration
 
 ## Dashboard
 
-A section called "Explore data" is integrated with the objective of inspecting the data previously obtained and preprocessed by means of the extraction systems, additionally two sections are integrated for the analysis and visualization of the data coming from GrupLAC and Scopus. The dashboard is developed within the framework of the degree work entitled "Dashboard for bibliometric analysis and visualization within the scope of research groups in the department of Cauca" developed at the University of Cauca by students Jarby Daniel Salazar Galindez and Edison Alexander Mosquera Perdomo. The dashboard seeks to be an assistant for the actors of the Regional System of Science, Technology and Innovation of Cauca.
+A section called "Explore data" is integrated with the objective of inspecting the data previously obtained and preprocessed by means of the extraction systems, additionally two sections are integrated for the analysis and visualization of the data coming from GrupLAC and Scopus. The dashboard is developed within the framework of the degree work entitled "Dashboard for bibliometric analysis and visualization within the scope of research groups in the department of Cauca" developed at the University of Cauca by students Edison Alexander Mosquera Perdomo and Jarby Daniel Salazar Galindez. The dashboard seeks to be an assistant for the actors of the Regional System of Science, Technology and Innovation of Cauca.
 
 ---
 
@@ -123,8 +123,8 @@ Example used for the Department of Cauca:
 
 ## Authors
 
-- [Jarby Daniel Salazar Galindez](https://www.github.com/jarbydaniel)
 - [Edison Alexander Mosquera Perdomo](https://www.github.com/alexper11)
+- [Jarby Daniel Salazar Galindez](https://www.github.com/jarbydaniel)
 
 ## License
 
