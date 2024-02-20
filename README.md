@@ -1,5 +1,6 @@
 ![logo_ScienGroup](https://github.com/JarbyDaniel/ResearchGroupsDashboard/assets/61321403/8a5a4539-cc4d-4e00-a50e-179eb20ca3c8)
 
+
 # Research Group Analitycs Dashboard
 
 Software for the analysis and bibliometric visualization of the scientific production of research groups in the Department of Cauca.
